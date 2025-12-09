@@ -1,5 +1,5 @@
 # 📉 Telecom Customer Churn Prediction
-
+![Project Banner](Your paragraph text.png)
 ## 📌 Project Overview
 Customer churn is a critical metric for telecom companies. This project utilizes machine learning to predict which customers are likely to leave the service provider. Beyond prediction, the analysis identifies key drivers of churn (such as contract type and monthly charges) to help the business formulate retention strategies.
 

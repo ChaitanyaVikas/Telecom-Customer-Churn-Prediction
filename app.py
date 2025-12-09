@@ -67,16 +67,30 @@ model.fit(X, y)
 prediction = model.predict(final_input)
 prediction_proba = model.predict_proba(final_input)
 
-# 7. SHOW RESULTS
+# ... (keep all your existing code) ...
+
+# 7. SHOW RESULTS (Existing code)
 st.subheader("Prediction Result")
-
 if prediction == 1:
-    st.error(f"⚠️ High Risk: Customer is likely to CHURN. (Probability: {prediction_proba[0][1]*100:.2f}%)")
+    st.error(f"⚠️ High Risk: Customer is likely to CHURN.")
 else:
-    st.success(f"✅ Low Risk: Customer is likely to STAY. (Probability: {prediction_proba[0][0]*100:.2f}%)")
+    st.success(f"✅ Low Risk: Customer is likely to STAY.")
 
-# 8. SHOW VISUALIZATION
-st.subheader("Why?")
+# --- NEW DYNAMIC GRAPH CODE STARTS HERE ---
+st.subheader("Confidence Score")
+# Create a simple dataframe for the probabilities
+prob_df = pd.DataFrame({
+    "Outcome": ["Stay (Low Risk)", "Leave (High Risk)"],
+    "Probability": prediction_proba[0]
+})
+
+# Create a bar chart that updates instantly
+st.bar_chart(prob_df.set_index("Outcome"))
+# --- NEW CODE ENDS ---
+
+# 8. SHOW VISUALIZATION (Keep your existing static graph below as "Model Logic")
+st.subheader("Model Logic (Global Feature Importance)")
+# ... (rest of your existing graph code)
 feature_importances = pd.Series(model.feature_importances_, index=X.columns)
 top_5 = feature_importances.sort_values(ascending=False).head(5)
 

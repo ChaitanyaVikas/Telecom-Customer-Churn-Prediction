@@ -79,28 +79,3 @@ plt.title('Top 5 Factors Driving Customer Churn')
 plt.xlabel('Importance Score')
 plt.ylabel('Feature')
 plt.show()  # This will open a window with the graph
-
-# ... (keep all your existing code) ...
-
-# 7. SHOW RESULTS (Existing code)
-st.subheader("Prediction Result")
-if prediction == 1:
-    st.error(f"⚠️ High Risk: Customer is likely to CHURN.")
-else:
-    st.success(f"✅ Low Risk: Customer is likely to STAY.")
-
-# --- NEW DYNAMIC GRAPH CODE STARTS HERE ---
-st.subheader("Confidence Score")
-# Create a simple dataframe for the probabilities
-prob_df = pd.DataFrame({
-    "Outcome": ["Stay (Low Risk)", "Leave (High Risk)"],
-    "Probability": prediction_proba[0]
-})
-
-# Create a bar chart that updates instantly
-st.bar_chart(prob_df.set_index("Outcome"))
-# --- NEW CODE ENDS ---
-
-# 8. SHOW VISUALIZATION (Keep your existing static graph below as "Model Logic")
-st.subheader("Model Logic (Global Feature Importance)")
-# ... (rest of your existing graph code)

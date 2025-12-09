@@ -1,5 +1,9 @@
 # 📉 Telecom Customer Churn Prediction
 ![Project Banner](social-preview.png)
+
+
+### 🔗 [Live Dashboard Demo]([https://telecom-customer-churn-prediction-3zbhqdtvykg8ijy5mgojap.streamlit.app/)
+
 ## 📌 Project Overview
 Customer churn is a critical metric for telecom companies. This project utilizes machine learning to predict which customers are likely to leave the service provider. Beyond prediction, the analysis identifies key drivers of churn (such as contract type and monthly charges) to help the business formulate retention strategies.
 
@@ -13,8 +17,6 @@ Customer churn is a critical metric for telecom companies. This project utilizes
 * **Model:** Random Forest Classifier (Ensemble Learning)
 
 ---
-### 🔗 [Live Dashboard Demo]([https://telecom-customer-churn-prediction-3zbhqdtvykg8ijy5mgojap.streamlit.app/])
-
 ## 📊 Key Findings & Visuals
 The Random Forest model achieved an **Accuracy of ~79%**. Feature importance analysis revealed the top factors influencing churn:
 

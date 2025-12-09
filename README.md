@@ -13,6 +13,7 @@ Customer churn is a critical metric for telecom companies. This project utilizes
 * **Model:** Random Forest Classifier (Ensemble Learning)
 
 ---
+### 🔗 [Live Dashboard Demo]([https://amazon-price-tracker-hi5mt96sttgja68qyynvyq.streamlit.app/](https://telecom-customer-churn-prediction-3zbhqdtvykg8ijy5mgojap.streamlit.app/))
 
 ## 📊 Key Findings & Visuals
 The Random Forest model achieved an **Accuracy of ~79%**. Feature importance analysis revealed the top factors influencing churn:
